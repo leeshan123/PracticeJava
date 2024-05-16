@@ -13,6 +13,9 @@ public class LocalDateMain {
         ofDate = ofDate.plusDays(10);
         System.out.println("지정 날짜+10d = "+ofDate);
 
+        System.out.println(nowDate.getYear());
+        System.out.println(nowDate.getMonth());
+        System.out.println(nowDate.getDayOfMonth());
     }
 
 
