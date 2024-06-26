@@ -1,26 +1,28 @@
 package codingtest.session02;
 
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class Session_02_02 {
         //세션 2번의 2번 문제(보이는 학생)
-        // X
+        // O
 
-        public ArrayList<Integer> solution(int n, int[] arrInt){
-            int x = 0;
-            ArrayList<Integer> answer = new ArrayList<>();
-            answer.add(arrInt[0]);
+        public int solution(int n, int[] arrInt){
+            int count = 1;
+            int max = arrInt[0];
 
-            for(int i=0; i<n-1; i++){
-                if(arrInt[i] < arrInt[i+1])
-                    answer.add(arrInt[i+1]);
+
+            for(int i=0; i<n; i++){
+                if(arrInt[i] > max) {
+                    max = arrInt[i];
+                    count++;
+                }
             }
 
 
 
 
-            return answer;
+            return count;
         }
 
 
@@ -32,10 +34,8 @@ public class Session_02_02 {
             for(int i=0; i<n; i++){
                 arrInt[i] =scan.nextInt();
             }
-            for(int x : T.solution(n,arrInt)){
-                System.out.print(x+" ");
-            }
 
+            System.out.println(T.solution(n,arrInt));
 
         }
     }
