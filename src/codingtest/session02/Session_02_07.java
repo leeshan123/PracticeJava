@@ -3,8 +3,8 @@ package codingtest.session02;
 
 import java.util.Scanner;
 
-public class Session_02_05 {
-        //세션 2번의 5번 문제(소수)
+public class Session_02_07 {
+        //세션 2번의 7번 문제(점수계산)
         // 시간오버
 
 
@@ -25,7 +25,7 @@ public class Session_02_05 {
 
 
         public static void main(String[] args) {
-            Session_02_05 T = new Session_02_05();
+            Session_02_07 T = new Session_02_07();
             Scanner scan = new Scanner(System.in);
             int n = scan.nextInt();
 
