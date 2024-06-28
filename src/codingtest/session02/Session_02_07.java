@@ -8,19 +8,23 @@ public class Session_02_07 {
         // 시간오버
 
 
-        public int solution(int n){
-            int answer = 0;
-            int[] ch = new int[n+1];
-            for(int i=2; i<=n; i++){
-                if(ch[i]==0){
-                    answer++;
-                    //배수에 대해서 다 1을 넣어줌.
-                    for(int j=i; j<=n; j=j+i) ch[j]=1;
+        public int solution(int n,int[] arr){
+            int sum = 0;
+            int count = 0;
+
+
+            for(int i=0; i<n; i++){
+                if(arr[i] == 1){
+                    count++;
+                    sum += count;
+                }
+                else {
+                    count = 0;
+
                 }
             }
 
-
-            return answer;
+            return sum;
         }
 
 
@@ -28,8 +32,14 @@ public class Session_02_07 {
             Session_02_07 T = new Session_02_07();
             Scanner scan = new Scanner(System.in);
             int n = scan.nextInt();
+            int[] arr = new int[n];
 
-            System.out.println(T.solution(n));
+            for(int i=0; i <n; i++)
+                arr[i] = scan.nextInt();
+
+            System.out.println(T.solution(n,arr));
+
+
 
         }
     }
