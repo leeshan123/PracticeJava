@@ -9,8 +9,10 @@ public class Session_01_08 {
     public String solution(String str){
         String answer = "NO";
         str = str.toUpperCase().replaceAll("[^A-Z]","");
+//        str = str.replaceAll("a", "b");
         String tmp = new StringBuilder(str).reverse().toString();
         if(str.equals(tmp)) answer = "YES";
+
 
 
 

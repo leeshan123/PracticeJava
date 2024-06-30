@@ -13,6 +13,7 @@ public class Session_01_04 {
         ArrayList<String> answer = new ArrayList<>();
 
         for(String s : str){
+            //스트링 빌드의 reverse사용
             String tmp = new StringBuilder(s).reverse().toString();
             answer.add(tmp);
 

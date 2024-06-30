@@ -9,6 +9,7 @@ public class Session_01_03 {
     public String solution(String str){
         String answer = "";
 
+        //split 사용.
         String[] strArr = str.split(" ");
         int len = 0;
 
