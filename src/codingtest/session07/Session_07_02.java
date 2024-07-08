@@ -13,8 +13,8 @@ public class Session_07_02 {
             if(n==0) return;
             else {
                 DFS(n/2);
-                System.out.print(n%2);
-            }
+                System.out.print(n%2);}
+
 
         }
 
@@ -35,7 +35,6 @@ public class Session_07_02 {
             Scanner scan = new Scanner(System.in);
 
             int n = scan.nextInt();
-            String s = "";
             T.DFS(n);
 
         }
