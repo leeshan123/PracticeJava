@@ -10,7 +10,7 @@ public class S11 {
 
         for(int i=0; i<arr[i].length; i++){
             for(int j=0; j<arr.length; j++){
-                if(arr[j][i] == arr[j][])
+//                if(arr[j][i] == arr[j][])
             }
         }
 

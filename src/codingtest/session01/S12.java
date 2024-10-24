@@ -7,23 +7,15 @@ public class S12 {
     public String solution(int n, String s){
         String answer = "";
         int length = s.length()/n;
-        String[] arr = new String[n];
-        int num =0;
 
-        for(int i=0; i<arr.length;i++){
-            arr[i] = s.substring(i*length,(i+1)*length);
-            char[] charArr = arr[i].toCharArray();
-            for(int j=0; j<charArr.length; j++){
-                if(charArr[i] == '#'){
-                    num += (int)Math.pow(2,charArr.length-j-2);
-                }
-            }
-            System.out.println(num);
-            answer += (char)num;
-            num = 0;
 
+        for(int i=0; i<n;i++){
+            String tmp = s.substring(0,length).replace('#','1').replace('*','0');
+            char c = (char)Integer.parseInt(tmp,2);
+            answer += c;
+            System.out.println(tmp);
+            s = s.substring(length);
         }
-
 
 
 

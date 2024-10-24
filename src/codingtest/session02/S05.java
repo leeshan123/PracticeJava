@@ -7,22 +7,16 @@ public class S05 {
     public int solution(int n){
 
         int answer = 0;
+        int[] arr = new int[n+1];
 
-        for(int i=2; i<=n;i++){
-            int count = 0;
-
-            for(int j=1; j<=n; j++){
-                if(i%j == 0) {
-                    count++;
-                }
-                if(count >= 3){
-                    break;
-                }
-            }
-            if(count ==2) {
+        for(int i=2; i<arr.length; i++){
+            if(arr[i]==0){
                 answer++;
+                for(int j=i; j<arr.length; j=j+i){
+                    arr[j] = 1;
+                }
+
             }
-            count = 0;
         }
 
 
