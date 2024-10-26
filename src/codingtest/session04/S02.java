@@ -8,6 +8,7 @@ public class S02 {
 
     public String solution(String s1,String s2){
 
+        int answer =0;
 
         Map<Character,Integer> map = new HashMap<>();
 
