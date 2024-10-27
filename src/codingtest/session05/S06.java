@@ -1,29 +1,27 @@
 package codingtest.session05;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Scanner;
+import java.util.*;
 
 public class S06 {
 
-    public int solution(String s){
+    public int solution(int n, int k){
 
         int answer = 0;
-        Deque<Character> stack = new ArrayDeque<>();
-        char[] sArr = s.toCharArray();
-
-        for(int i = 0; i < sArr.length; i++){
-            if(sArr[i] =='('){
-                stack.push(sArr[i]);
-            }else {
-                stack.pop();
-                if(sArr[i-1] == '('){
-                    answer += stack.size();
-                }else { // 막대기의 끝인 경우
-                    answer += 1;
-                }
-            }
+        Queue<Integer> queue = new LinkedList<>();
+        for(int i=1; i<=n; i++){
+            queue.offer(i);
         }
+
+        while (!queue.isEmpty()){
+            for(int i=1; i<k; i++) queue.offer(queue.poll());
+            queue.poll();
+            if(queue.size()==1) answer = queue.poll();
+
+
+        }
+
+
+
 
 
 
@@ -33,9 +31,10 @@ public class S06 {
     public static void main(String[] args) {
         S06 T = new S06();
         Scanner scan = new Scanner(System.in);
-        String s = scan.next();
+        int n = scan.nextInt();
+        int k = scan.nextInt();
 
-        System.out.println(T.solution(s));
+        System.out.println(T.solution(n,k));
 
 
     }
